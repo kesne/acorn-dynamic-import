@@ -1,0 +1,256 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 66,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 4,
+      "column": 0
+    }
+  },
+  "range": [
+    0,
+    66
+  ],
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "start": 0,
+      "end": 65,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 1
+        }
+      },
+      "range": [
+        0,
+        65
+      ],
+      "id": {
+        "type": "Identifier",
+        "start": 9,
+        "end": 19,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 9
+          },
+          "end": {
+            "line": 1,
+            "column": 19
+          }
+        },
+        "range": [
+          9,
+          19
+        ],
+        "name": "loadImport"
+      },
+      "generator": false,
+      "expression": false,
+      "params": [
+        {
+          "type": "Identifier",
+          "start": 20,
+          "end": 24,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 20
+            },
+            "end": {
+              "line": 1,
+              "column": 24
+            }
+          },
+          "range": [
+            20,
+            24
+          ],
+          "name": "file"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "start": 26,
+        "end": 65,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 26
+          },
+          "end": {
+            "line": 3,
+            "column": 1
+          }
+        },
+        "range": [
+          26,
+          65
+        ],
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "start": 30,
+            "end": 63,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 2
+              },
+              "end": {
+                "line": 2,
+                "column": 35
+              }
+            },
+            "range": [
+              30,
+              63
+            ],
+            "argument": {
+              "type": "CallExpression",
+              "start": 37,
+              "end": 62,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 34
+                }
+              },
+              "range": [
+                37,
+                62
+              ],
+              "callee": {
+                "type": "Import",
+                "start": 37,
+                "end": 43,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 15
+                  }
+                },
+                "range": [
+                  37,
+                  43
+                ]
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "start": 44,
+                  "end": 61,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 33
+                    }
+                  },
+                  "range": [
+                    44,
+                    61
+                  ],
+                  "expressions": [
+                    {
+                      "type": "Identifier",
+                      "start": 52,
+                      "end": 56,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 24
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 28
+                        }
+                      },
+                      "range": [
+                        52,
+                        56
+                      ],
+                      "name": "file"
+                    }
+                  ],
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "start": 45,
+                      "end": 50,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 17
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 22
+                        }
+                      },
+                      "range": [
+                        45,
+                        50
+                      ],
+                      "value": {
+                        "raw": "test/",
+                        "cooked": "test/"
+                      },
+                      "tail": false
+                    },
+                    {
+                      "type": "TemplateElement",
+                      "start": 57,
+                      "end": 60,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 29
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 32
+                        }
+                      },
+                      "range": [
+                        57,
+                        60
+                      ],
+                      "value": {
+                        "raw": ".js",
+                        "cooked": ".js"
+                      },
+                      "tail": true
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "module"
+}

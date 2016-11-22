@@ -1,0 +1,247 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 67,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "range": [
+    0,
+    67
+  ],
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 30,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 30
+        }
+      },
+      "range": [
+        0,
+        30
+      ],
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 6,
+          "end": 29,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 29
+            }
+          },
+          "range": [
+            6,
+            29
+          ],
+          "id": {
+            "type": "Identifier",
+            "start": 6,
+            "end": 17,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 6
+              },
+              "end": {
+                "line": 1,
+                "column": 17
+              }
+            },
+            "range": [
+              6,
+              17
+            ],
+            "name": "testVarible"
+          },
+          "init": {
+            "type": "Literal",
+            "start": 20,
+            "end": 29,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 20
+              },
+              "end": {
+                "line": 1,
+                "column": 29
+              }
+            },
+            "range": [
+              20,
+              29
+            ],
+            "value": "test.js",
+            "raw": "'test.js'"
+          }
+        }
+      ],
+      "kind": "const"
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 31,
+      "end": 66,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 35
+        }
+      },
+      "range": [
+        31,
+        66
+      ],
+      "expression": {
+        "type": "CallExpression",
+        "start": 37,
+        "end": 65,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 34
+          }
+        },
+        "range": [
+          37,
+          65
+        ],
+        "callee": {
+          "type": "MemberExpression",
+          "start": 37,
+          "end": 55,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 24
+            }
+          },
+          "range": [
+            37,
+            55
+          ],
+          "object": {
+            "type": "Identifier",
+            "start": 38,
+            "end": 49,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 18
+              }
+            },
+            "range": [
+              38,
+              49
+            ],
+            "name": "testVarible"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 51,
+            "end": 55,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 20
+              },
+              "end": {
+                "line": 2,
+                "column": 24
+              }
+            },
+            "range": [
+              51,
+              55
+            ],
+            "name": "then"
+          },
+          "computed": false
+        },
+        "arguments": [
+          {
+            "type": "ArrowFunctionExpression",
+            "start": 56,
+            "end": 64,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 25
+              },
+              "end": {
+                "line": 2,
+                "column": 33
+              }
+            },
+            "range": [
+              56,
+              64
+            ],
+            "id": null,
+            "generator": false,
+            "expression": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 62,
+              "end": 64,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 31
+                },
+                "end": {
+                  "line": 2,
+                  "column": 33
+                }
+              },
+              "range": [
+                62,
+                64
+              ],
+              "body": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "module"
+}
