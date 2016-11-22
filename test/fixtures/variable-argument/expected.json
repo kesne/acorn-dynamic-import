@@ -119,12 +119,12 @@
       ],
       "expression": {
         "type": "CallExpression",
-        "start": 37,
+        "start": 31,
         "end": 65,
         "loc": {
           "start": {
             "line": 2,
-            "column": 6
+            "column": 0
           },
           "end": {
             "line": 2,
@@ -132,17 +132,17 @@
           }
         },
         "range": [
-          37,
+          31,
           65
         ],
         "callee": {
           "type": "MemberExpression",
-          "start": 37,
+          "start": 31,
           "end": 55,
           "loc": {
             "start": {
               "line": 2,
-              "column": 6
+              "column": 0
             },
             "end": {
               "line": 2,
@@ -150,28 +150,68 @@
             }
           },
           "range": [
-            37,
+            31,
             55
           ],
           "object": {
-            "type": "Identifier",
-            "start": 38,
-            "end": 49,
+            "type": "CallExpression",
+            "start": 31,
+            "end": 50,
             "loc": {
               "start": {
                 "line": 2,
-                "column": 7
+                "column": 0
               },
               "end": {
                 "line": 2,
-                "column": 18
+                "column": 19
               }
             },
             "range": [
-              38,
-              49
+              31,
+              50
             ],
-            "name": "testVarible"
+            "callee": {
+              "type": "Import",
+              "start": 31,
+              "end": 37,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 0
+                },
+                "end": {
+                  "line": 2,
+                  "column": 6
+                }
+              },
+              "range": [
+                31,
+                37
+              ]
+            },
+            "arguments": [
+              {
+                "type": "Identifier",
+                "start": 38,
+                "end": 49,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 18
+                  }
+                },
+                "range": [
+                  38,
+                  49
+                ],
+                "name": "testVarible"
+              }
+            ]
           },
           "property": {
             "type": "Identifier",

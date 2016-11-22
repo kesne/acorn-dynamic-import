@@ -10,6 +10,10 @@ export default function injectDynamicImport(acorn) {
     return this.finishNode(node, 'Import');
   }
 
+  function peekNext() {
+    return this.input[this.pos];
+  }
+
   // eslint-disable-next-line no-param-reassign
   acorn.plugins.dynamicImport = function dynamicImportPlugin(instance) {
     instance.extend('parseStatement', nextMethod => (
@@ -17,8 +21,8 @@ export default function injectDynamicImport(acorn) {
         const node = this.startNode();
         // eslint-disable-next-line no-underscore-dangle
         if (this.type === tt._import) {
-          this.next();
-          if (this.type === tt.parenL) {
+          const nextToken = peekNext.call(this);
+          if (nextToken === tt.parenL.label) {
             const expr = this.parseExpression();
             return this.parseExpressionStatement(node, expr);
           }

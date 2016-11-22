@@ -36,25 +36,65 @@
         21
       ],
       "expression": {
-        "type": "Literal",
-        "start": 7,
-        "end": 19,
+        "type": "CallExpression",
+        "start": 0,
+        "end": 20,
         "loc": {
           "start": {
             "line": 1,
-            "column": 7
+            "column": 0
           },
           "end": {
             "line": 1,
-            "column": 19
+            "column": 20
           }
         },
         "range": [
-          7,
-          19
+          0,
+          20
         ],
-        "value": "testing.js",
-        "raw": "'testing.js'"
+        "callee": {
+          "type": "Import",
+          "start": 0,
+          "end": 6,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 6
+            }
+          },
+          "range": [
+            0,
+            6
+          ]
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 7,
+            "end": 19,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 19
+              }
+            },
+            "range": [
+              7,
+              19
+            ],
+            "value": "testing.js",
+            "raw": "'testing.js'"
+          }
+        ]
       }
     },
     {
@@ -158,93 +198,133 @@
         74
       ],
       "expression": {
-        "type": "TemplateLiteral",
-        "start": 52,
-        "end": 72,
+        "type": "CallExpression",
+        "start": 45,
+        "end": 73,
         "loc": {
           "start": {
             "line": 4,
-            "column": 7
+            "column": 0
           },
           "end": {
             "line": 4,
-            "column": 27
+            "column": 28
           }
         },
         "range": [
-          52,
-          72
+          45,
+          73
         ],
-        "expressions": [
-          {
-            "type": "Identifier",
-            "start": 63,
-            "end": 67,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 18
-              },
-              "end": {
-                "line": 4,
-                "column": 22
-              }
+        "callee": {
+          "type": "Import",
+          "start": 45,
+          "end": 51,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0
             },
-            "range": [
-              63,
-              67
-            ],
-            "name": "test"
-          }
-        ],
-        "quasis": [
-          {
-            "type": "TemplateElement",
-            "start": 53,
-            "end": 61,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 8
-              },
-              "end": {
-                "line": 4,
-                "column": 16
-              }
-            },
-            "range": [
-              53,
-              61
-            ],
-            "value": {
-              "raw": "testing/",
-              "cooked": "testing/"
-            },
-            "tail": false
+            "end": {
+              "line": 4,
+              "column": 6
+            }
           },
+          "range": [
+            45,
+            51
+          ]
+        },
+        "arguments": [
           {
-            "type": "TemplateElement",
-            "start": 68,
-            "end": 71,
+            "type": "TemplateLiteral",
+            "start": 52,
+            "end": 72,
             "loc": {
               "start": {
                 "line": 4,
-                "column": 23
+                "column": 7
               },
               "end": {
                 "line": 4,
-                "column": 26
+                "column": 27
               }
             },
             "range": [
-              68,
-              71
+              52,
+              72
             ],
-            "value": {
-              "raw": ".js",
-              "cooked": ".js"
-            },
-            "tail": true
+            "expressions": [
+              {
+                "type": "Identifier",
+                "start": 63,
+                "end": 67,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 18
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 22
+                  }
+                },
+                "range": [
+                  63,
+                  67
+                ],
+                "name": "test"
+              }
+            ],
+            "quasis": [
+              {
+                "type": "TemplateElement",
+                "start": 53,
+                "end": 61,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 8
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 16
+                  }
+                },
+                "range": [
+                  53,
+                  61
+                ],
+                "value": {
+                  "raw": "testing/",
+                  "cooked": "testing/"
+                },
+                "tail": false
+              },
+              {
+                "type": "TemplateElement",
+                "start": 68,
+                "end": 71,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 23
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 26
+                  }
+                },
+                "range": [
+                  68,
+                  71
+                ],
+                "value": {
+                  "raw": ".js",
+                  "cooked": ".js"
+                },
+                "tail": true
+              }
+            ]
           }
         ]
       }
@@ -269,12 +349,12 @@
       ],
       "expression": {
         "type": "CallExpression",
-        "start": 82,
+        "start": 76,
         "end": 111,
         "loc": {
           "start": {
             "line": 6,
-            "column": 6
+            "column": 0
           },
           "end": {
             "line": 6,
@@ -282,17 +362,17 @@
           }
         },
         "range": [
-          82,
+          76,
           111
         ],
         "callee": {
           "type": "MemberExpression",
-          "start": 82,
+          "start": 76,
           "end": 101,
           "loc": {
             "start": {
               "line": 6,
-              "column": 6
+              "column": 0
             },
             "end": {
               "line": 6,
@@ -300,29 +380,69 @@
             }
           },
           "range": [
-            82,
+            76,
             101
           ],
           "object": {
-            "type": "Literal",
-            "start": 83,
-            "end": 95,
+            "type": "CallExpression",
+            "start": 76,
+            "end": 96,
             "loc": {
               "start": {
                 "line": 6,
-                "column": 7
+                "column": 0
               },
               "end": {
                 "line": 6,
-                "column": 19
+                "column": 20
               }
             },
             "range": [
-              83,
-              95
+              76,
+              96
             ],
-            "value": "testing.js",
-            "raw": "'testing.js'"
+            "callee": {
+              "type": "Import",
+              "start": 76,
+              "end": 82,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 6,
+                  "column": 6
+                }
+              },
+              "range": [
+                76,
+                82
+              ]
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 83,
+                "end": 95,
+                "loc": {
+                  "start": {
+                    "line": 6,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 19
+                  }
+                },
+                "range": [
+                  83,
+                  95
+                ],
+                "value": "testing.js",
+                "raw": "'testing.js'"
+              }
+            ]
           },
           "property": {
             "type": "Identifier",
