@@ -1,3 +1,7 @@
+# 2.0.1
+
+- Removing unnecessary `in-publish` dependency.
+
 # 2.0.0
 
 - Updating acorn version to >= 4.
