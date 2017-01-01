@@ -9,13 +9,15 @@ For more information, check out the [proposal repo](https://github.com/tc39/prop
 You can use this module directly in order to get Acorn instance with plugin installed:
 
 ```js
-const acorn = require('acorn-dynamic-import');
+import acorn from 'acorn-dynamic-import';
+// or...
+const acorn = require('acorn-dynamic-import').default;
 ```
 
 Or you can use `inject.js` for injecting plugin into your own version of Acorn like this:
 
 ```js
-const acorn = require('acorn-dynamic-import/lib/inject')(require('./custom-acorn'));
+const acorn = require('acorn-dynamic-import/lib/inject').default(require('./custom-acorn'));
 ```
 
 Then, use the `plugins` option whenever you need to support dynamicImport while parsing:
