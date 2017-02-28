@@ -27,6 +27,7 @@ const ast = acorn.parse(code, {
   plugins: { dynamicImport: true }
 });
 ```
+
 ## License
 
 This plugin is issued under the [MIT license](./LICENSE).
