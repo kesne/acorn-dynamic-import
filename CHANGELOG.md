@@ -1,3 +1,7 @@
+# 2.0.2
+
+- Fixing parsing of `yield import()`.
+
 # 2.0.1
 
 - Removing unnecessary `in-publish` dependency.
