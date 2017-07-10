@@ -12,6 +12,7 @@ export default function injectDynamicImport(acorn) {
     if (this.type !== tt.parenL) {
       this.unexpected();
     }
+
     return this.finishNode(node, 'Import');
   }
 
@@ -42,6 +43,24 @@ export default function injectDynamicImport(acorn) {
           return parseDynamicImport.call(this);
         }
         return nextMethod.call(this, refDestructuringErrors);
+      }
+    ));
+
+    instance.extend('parseExpression', nextMethod => (
+      function parseExpression() {
+        const node = nextMethod.call(this);
+        if (node.type === 'CallExpression' && node.callee.type === 'Import') {
+          if (node.arguments.length !== 1) {
+            this.raise(node.start, 'import() requires exactly one argument');
+          }
+
+          const importArg = node.arguments[0];
+          if (importArg && importArg.type === 'SpreadElement') {
+            this.raise(importArg.start, '... is not allowed in import()');
+          }
+        }
+
+        return node;
       }
     ));
   };
