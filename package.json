@@ -24,10 +24,13 @@
     "preversion": "npm run test && npm run check-changelog && npm run check-only-changelog-changed",
     "tag": "git tag v$npm_package_version"
   },
-  "dependencies": {
-    "acorn": "^5.0.0"
+  "peerDependencies": {
+    "acorn": "^6.0.0",
+    "acorn-walk": "^6.0.0"
   },
   "devDependencies": {
+    "acorn": "^6.0.0",
+    "acorn-walk": "^6.0.0",
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-airbnb": "^2.1.1",

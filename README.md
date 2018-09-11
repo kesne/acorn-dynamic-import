@@ -6,29 +6,16 @@ For more information, check out the [proposal repo](https://github.com/tc39/prop
 
 ## Usage
 
-You can use this module directly in order to get Acorn instance with plugin installed:
+Importing this module gives you a plugin that can be used to extend an Acorn parser:
 
 ```js
-import acorn from 'acorn-dynamic-import';
-// or...
-const acorn = require('acorn-dynamic-import').default;
+import Parser from 'acorn';
+import dynamicImport from 'acorn-dynamic-import';
+
+Parser.extend(dynamicImport).parse('import("something");');
 ```
 
-Or you can use `inject.js` for injecting plugin into your own version of Acorn like this:
-
-```js
-const acorn = require('acorn-dynamic-import/lib/inject').default(require('./custom-acorn'));
-```
-
-Then, use the `plugins` option whenever you need to support dynamicImport while parsing:
-
-```js
-const ast = acorn.parse(code, {
-  plugins: { dynamicImport: true }
-});
-```
-
-To use the updated walk functionality the process is similar. You can require the default implementation as:
+To use the updated walk functionality, you can require the walk extension, to get a copy of Acorn's walk module with support for dynamic import nodes:
 
 ```js
 import walk from 'acorn-dynamic-import/lib/walk';
@@ -43,7 +30,6 @@ import { inject } from 'acorn-dynamic-import/lib/walk';
 import acornWalk from 'acorn/dist/walk';
 
 const walk = inject(acornWalk);
-
 ``` 
 
 ## License

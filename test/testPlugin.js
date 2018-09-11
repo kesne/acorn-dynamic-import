@@ -1,15 +1,15 @@
-import acorn from '../src';
+import * as acorn from 'acorn';
+import dynamicImport from '../src/index';
+
+const Parser = acorn.Parser.extend(dynamicImport);
 
 export default function testPlugin(code) {
   let result;
   try {
-    result = acorn.parse(code, {
+    result = Parser.parse(code, {
       ecmaVersion: 7,
       locations: true,
       ranges: true,
-      plugins: {
-        dynamicImport: true,
-      },
       sourceType: 'module',
     });
   } catch (e) {
