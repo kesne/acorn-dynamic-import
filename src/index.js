@@ -1,4 +1,4 @@
 import * as acorn from 'acorn';
-import inject from './inject';
+import dynamicImportPlugin from './plugin';
 
-export default inject(acorn);
+export default acorn.Parser.extend(dynamicImportPlugin);

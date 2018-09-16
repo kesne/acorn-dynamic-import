@@ -1,5 +1,5 @@
-import * as walk from 'acorn/dist/walk';
-import { DynamicImportKey } from './inject';
+import * as walk from 'acorn-walk/dist/walk';
+import { DynamicImportKey } from './plugin';
 
 export function inject(injectableWalk) {
   return Object.assign({}, injectableWalk, {
