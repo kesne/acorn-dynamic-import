@@ -1,8 +1,7 @@
 /* eslint-disable no-underscore-dangle */
+import { tokTypes as tt } from 'acorn';
 
 export const DynamicImportKey = 'Import';
-
-const { tokTypes: tt } = require('acorn')
 
 // NOTE: This allows `yield import()` to parse correctly.
 tt._import.startsExpr = true;
@@ -26,7 +25,7 @@ export default function dynamicImport(Parser) {
       if (this.type === tt._import && parenAfter.call(this)) {
         return this.parseExpressionStatement(this.startNode(), this.parseExpression());
       }
-      return super.parseStatement(context, topLevel, exports)
+      return super.parseStatement(context, topLevel, exports);
     }
 
     parseExprAtom(refDestructuringErrors) {
@@ -36,4 +35,4 @@ export default function dynamicImport(Parser) {
       return super.parseExprAtom(refDestructuringErrors);
     }
   };
-};
+}
