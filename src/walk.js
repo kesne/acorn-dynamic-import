@@ -1,5 +1,4 @@
-import * as walk from 'acorn/dist/walk';
-import { DynamicImportKey } from './inject';
+import { DynamicImportKey } from './index';
 
 export function inject(injectableWalk) {
   return Object.assign({}, injectableWalk, {
@@ -8,5 +7,3 @@ export function inject(injectableWalk) {
     }),
   });
 }
-
-export default inject(walk);
