@@ -25,8 +25,7 @@
     "tag": "git tag v$npm_package_version"
   },
   "peerDependencies": {
-    "acorn": "^6.0.0",
-    "acorn-walk": "^6.0.0"
+    "acorn": "^6.0.0"
   },
   "devDependencies": {
     "acorn": "^6.0.0",

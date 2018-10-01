@@ -15,19 +15,11 @@ import dynamicImport from 'acorn-dynamic-import';
 Parser.extend(dynamicImport).parse('import("something");');
 ```
 
-To use the updated walk functionality, you can require the walk extension, to get a copy of Acorn's walk module with support for dynamic import nodes:
-
-```js
-import walk from 'acorn-dynamic-import/lib/walk';
-// or...
-const dynamicImportWalk = require('acorn-dynamic-import/lib/walk').default;
-```
-
-Or you can use the injectable version for injecting the new walk functionality into your own version of Acorn like this:
+To extend the AST walker for dynamic imports, you can injecting the new node type into [`acorn-walk`](https://www.npmjs.com/package/acorn-walk) like this:
 
 ```js
 import { inject } from 'acorn-dynamic-import/lib/walk';
-import acornWalk from 'acorn/dist/walk';
+import * as acornWalk from 'acorn-walk';
 
 const walk = inject(acornWalk);
 ``` 
