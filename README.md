@@ -18,11 +18,11 @@ Parser.extend(dynamicImport).parse('import("something");');
 To extend the AST walker for dynamic imports, you can injecting the new node type into [`acorn-walk`](https://www.npmjs.com/package/acorn-walk) like this:
 
 ```js
-import { inject } from 'acorn-dynamic-import/lib/walk';
+import inject from 'acorn-dynamic-import/lib/walk';
 import * as acornWalk from 'acorn-walk';
 
 const walk = inject(acornWalk);
-``` 
+```
 
 ## License
 
